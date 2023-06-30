@@ -17,6 +17,8 @@ from utils import (
     plot_loss
 )
 
+import os
+
 
 def main():
 
@@ -24,7 +26,13 @@ def main():
     model_args, data_args, training_args, finetuning_args = prepare_args(stage="sft")
     dataset = prepare_data(model_args, data_args)
     model, tokenizer = load_pretrained(model_args, finetuning_args, training_args.do_train, stage="sft")
-    dataset = preprocess_data(dataset, tokenizer, data_args, training_args, stage="sft")
+    tokenizer_dataset_path = '/root/data_baichuan/tokenizer_dataset.hf'
+    if os.path.exists(tokenizer_dataset_path):
+        from datasets import load_from_disk
+        dataset = load_from_disk(tokenizer_dataset_path)
+    else:
+        dataset = preprocess_data(dataset, tokenizer, data_args, training_args, stage="sft")
+        dataset.save_to_disk(tokenizer_dataset_path)
     data_collator = DynamicDataCollatorWithPadding(
         tokenizer=tokenizer,
         ignore_pad_token_for_loss=(data_args.ignore_pad_token_for_loss and not training_args.predict_with_generate)
