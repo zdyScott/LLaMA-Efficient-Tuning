@@ -169,4 +169,15 @@
       "response": "answer",
       "history": ""
     }
+  },
+  "test": {
+    "file_name": "test.json",
+    "file_sha1": "81312c57726853ae7d3489bd7d1263f3260acbad",
+    "columns": {
+      "prompt": "input",
+      "query": "",
+      "response": "output",
+      "history": ""
+    }
+  }
 }
