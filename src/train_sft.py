@@ -31,13 +31,13 @@ def main():
 
     # Prepare pretrained model and dataset
     model_args, data_args, training_args, finetuning_args = prepare_args(stage="sft")
-    dataset = prepare_data(model_args, data_args)
     model, tokenizer = load_pretrained(model_args, finetuning_args, training_args.do_train, stage="sft")
     tokenizer_dataset_path = '/root/workspace_law/data_baichuan/tokenizer_dataset.hf'
     if os.path.exists(tokenizer_dataset_path):
         from datasets import load_from_disk
         dataset = load_from_disk(tokenizer_dataset_path)
     else:
+        dataset = prepare_data(model_args, data_args)
         dataset = preprocess_data(dataset, tokenizer, data_args, training_args, stage="sft")
         dataset.save_to_disk(tokenizer_dataset_path)
     data_collator = DynamicDataCollatorWithPadding(
