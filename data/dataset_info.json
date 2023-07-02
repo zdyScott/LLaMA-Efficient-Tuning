@@ -219,5 +219,69 @@
       "response": "output",
       "history": ""
     }
+  },
+  "judical_examination":{
+    "file_name": "judical_examination.json",
+    "file_sha1": "81312c57726853ae7d3489bd7d1263f3260acbad",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": ""
+    }
+  },
+  "judical_examination_v2":{
+    "file_name": "judical_examination_v2.json",
+    "file_sha1": "81312c57726853ae7d3489bd7d1263f3260acbad",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": ""
+    }
+  },
+  "legal_advice": {
+    "file_name": "legal_advice.json",
+    "file_sha1": "81312c57726853ae7d3489bd7d1263f3260acbad",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": ""
+    },
+    "source_prefix":"一段律师与客户之间的交流对话。\n律师会根据客户的问题，依据中华人民共和国法律给出详细的、专业的和礼貌的回答。"
+  },
+  "legal_counsel_v2": {
+    "file_name": "legal_counsel_v2.json",
+    "file_sha1": "81312c57726853ae7d3489bd7d1263f3260acbad",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": ""
+    },
+    "source_prefix":"一段律师与客户之间的交流对话。\n律师会根据客户的问题，依据中华人民共和国法律给出详细的、专业的和礼貌的回答。"
+  },
+  "legal_counsel_multi_turn_with_article_v2": {
+    "file_name": "legal_counsel_multi_turn_with_article_v2.json",
+    "file_sha1": "81312c57726853ae7d3489bd7d1263f3260acbad",
+    "columns": {
+      "prompt": "input",
+      "query": "",
+      "response": "output",
+      "history": "history"
+    },
+    "source_prefix":"一段律师与客户之间的交流对话。\n律师会根据客户的问题，依据中华人民共和国法律给出详细的、专业的和礼貌的回答。"
+  },
+  "legal_counsel_with_article_v2": {
+    "file_name": "legal_counsel_with_article_v2.json",
+    "file_sha1": "81312c57726853ae7d3489bd7d1263f3260acbad",
+    "columns": {
+      "prompt": "input",
+      "query": "",
+      "response": "output",
+      "history": "history"
+    },
+    "source_prefix":"一段律师与客户之间的交流对话。\n律师会根据客户的问题，依据中华人民共和国法律给出详细的、专业的和礼貌的回答。"
   }
 }

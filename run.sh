@@ -1,12 +1,13 @@
 
 export CUDA_VISIBLE_DEVICES=0
 
+#52k,92k,CAIL2018_ALL_DATA_test,CAIL2018_ALL_DATA_train,cail2021sfks_0_train,cail2021sfks_1_train,cail2022sfzy_train,judical_examination,judical_examination_v2,legal_advice,legal_counsel_v2,legal_counsel_multi_turn_with_article_v2,legal_counsel_with_article_v2
 
 cp -rf ./data/dataset_info.json /root/workspace_law/data_baichuan
 python3 src/train_sft.py \
     --model_name_or_path /root/workspace_law/baichuan-7B \
     --do_train \
-    --dataset 52k,92k,CAIL2018_ALL_DATA_test,CAIL2018_ALL_DATA_train,cail2021sfks_0_train,cail2021sfks_1_train,cail2022sfzy_train \
+    --dataset  52k,92k,CAIL2018_ALL_DATA_test,CAIL2018_ALL_DATA_train,cail2021sfks_0_train,cail2021sfks_1_train,cail2022sfzy_train,judical_examination,judical_examination_v2,legal_advice,legal_counsel_v2,legal_counsel_multi_turn_with_article_v2,legal_counsel_with_article_v2 \
     --dataset_dir /root/workspace_law/data_baichuan \
     --finetuning_type lora \
     --output_dir /root/workspace_law/data_baichuan/output \
