@@ -23,6 +23,8 @@ python3 src/train_sft.py \
     --fp16 \
     --lora_target W_pack \
     --lora_rank 32 \
+    --prompt_template law \
+    
 
 # python3 src/cli_demo.py \
 #     --model_name_or_path /root/workspace_law/baichuan-7B \

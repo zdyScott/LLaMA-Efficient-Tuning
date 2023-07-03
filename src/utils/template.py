@@ -32,6 +32,18 @@ class Template:
                 use_history=True
             )
 
+        elif self.name == "law":
+            r"""
+            lawyer template.
+            """
+            self._register_template(
+                prefix="A chat between a lawyer and a client. "
+                       "The lawyer gives helpful, detailed, and polite answers to the client's questions.",
+                prompt="Client: {query}\nLawyer: ",
+                sep="\n",
+                use_history=True
+            )
+
         elif self.name == "alpaca":
             r"""
             Supports: https://huggingface.co/tatsu-lab/alpaca-7b-wdiff

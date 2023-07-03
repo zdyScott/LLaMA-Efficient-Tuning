@@ -417,7 +417,7 @@ def prepare_data(
         )
         dataset = raw_datasets[data_args.split]
 
-        max_dataset_length = 100000
+        max_dataset_length = 40000
         if len(dataset) >= max_dataset_length:
             dataset = dataset.shuffle(seed=42)
             dataset = dataset.select([i for i in range(max_dataset_length)])

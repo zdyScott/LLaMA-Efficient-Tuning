@@ -170,12 +170,10 @@ class DataTrainingArguments:
                 dataset_attr = DatasetAttr(
                     "file",
                     dataset_name=dataset_info[name]["file_name"],
-                    dataset_sha1=dataset_info[name].get("file_sha1", None),
-                    source_prefix=dataset_info[name].get("source_prefix", None)
+                    dataset_sha1=dataset_info[name].get("file_sha1", None)
                 )
 
-            if not dataset_attr.source_prefix:
-                dataset_attr.source_prefix = prefix_list[i]
+            dataset_attr.source_prefix = prefix_list[i]
 
             if "columns" in dataset_info[name]:
                 dataset_attr.prompt_column = dataset_info[name]["columns"].get("prompt", None)
